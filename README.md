@@ -1,3 +1,6 @@
 # agenda-rpg-front
 Front-end do app Agenda RPG
-:construction: Under Deveopment :construction:
+
+<h4 align="center"> 
+    :construction:  Under Development  :construction:
+</h4>
