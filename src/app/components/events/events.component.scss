@@ -1,0 +1,24 @@
+.e-container {
+  padding: 2em 2em;
+
+  &__title {
+    margin: 0 0 .5em;
+    padding: 0;
+    color: #fff
+  }
+
+  &__events-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1em;
+
+    &__filters {
+      width: 10em;
+
+      mat-form-fiel {
+        width: 5em;
+      }
+    }
+  }
+}

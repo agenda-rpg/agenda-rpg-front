@@ -1,0 +1,45 @@
+<div class="gi-container">
+
+  <h2 class="gi-container__title">Registre-se</h2>
+
+  <form class="gi-container__form" [formGroup]="generalInfoForm">
+
+    <mat-form-field class="gi-container__form__input">
+      <mat-label>Nome completo</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field class="gi-container__form__input">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field class="gi-container__form__input">
+      <mat-label>Data de nascimento</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="birthday">
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field class="gi-container__form__input">
+      <mat-label>Telefone</mat-label>
+      <input matInput formControlName="phone">
+    </mat-form-field>
+
+    <mat-form-field class="gi-container__form__select">
+      <mat-label>Tipo de usuário</mat-label>
+      <mat-select formControlName="userType">
+        <mat-option value="jogador">Jogador</mat-option>
+        <mat-option value="narrador">Narrador</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </form>
+
+  <div class="gi-container__next-btn">
+    <button mat-flat-button color="primary" (click)="goToPassword()">
+      Próximo
+    </button>
+  </div>
+
+</div>

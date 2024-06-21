@@ -1,0 +1,10 @@
+@if(showGeneralInfoPage) {
+  <div class="r-container">
+    <app-register-general-info class="r-container__general-info" (goToPasswordEmitter)="changePage($event)"></app-register-general-info>
+  </div>
+}
+@if(showPasswordPage) {
+  <div class="r-container">
+    <app-register-password class="r-container__password"></app-register-password>
+  </div>
+}

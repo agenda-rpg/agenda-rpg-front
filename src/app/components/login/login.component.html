@@ -1,0 +1,47 @@
+<div class="l-container">
+
+  <div class="l-container__logo">
+    <img
+    src="assets/images/logo/spell-book-medium.png"
+    alt="Agenda RPG Logo image"
+    class="l-container__logo__img"/>
+    <img
+    src="assets/images/logo/agenda-rpg-text.svg"
+    alt="Agenda RPG Logo text"
+    class="l-container__logo__text"/>
+  </div>
+
+  <div class="l-container__login">
+    <form action="submitLogin()" [formGroup]="loginForm" class="l-container__login__form">
+
+      <mat-form-field class="l-container__login__form__email-input">
+        <mat-label>Email</mat-label>
+        <input matInput #input placeholder="email@exemplo.com" formControlName="login">
+      </mat-form-field>
+
+      <mat-form-field class="l-container__login__form__password-input">
+        <mat-label>Enter your password</mat-label>
+        <input
+        matInput
+        [type]="hide ? 'password' : 'text'"
+        formControlName="password">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <button mat-flat-button color="primary" class="l-container__login__login-button">
+        <p>Entrar</p>
+      </button>
+      <div class="l-container__login__register-forgot-buttons">
+        <button mat-flat-button color="primary" class="l-container__login__register-forgot-buttons__register">
+          <p>Registrar</p>
+        </button>
+        <button mat-flat-button color="primary" class="l-container__login__register-forgot-buttons__forgot">
+          <p>Esqueci a senha</p>
+        </button>
+      </div>
+    </form>
+  </div>
+
+</div>

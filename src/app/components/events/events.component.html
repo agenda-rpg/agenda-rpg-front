@@ -1,0 +1,25 @@
+<div class="e-container">
+  <h1 class="e-container__title">Eventos</h1>
+
+  <div class="e-container__events-menu">
+    <div class="e-container__events-menu__filters">
+      <button mat-flat-button color="primary" class="e-container__events-menu__new-event__button">
+        <p>filtrar resultados</p>
+      </button>
+      <!-- TO-DO: criar accordeon com opções de filtragem de resultados -->
+    </div>
+    <div class="e-container__events-menu__new-event">
+      @if (userType === 'narrador') {
+        <a routerLink="/new-event" routerLinkActive="router-link-active">
+          <button  mat-flat-button color="primary" class="e-container__events-menu__new-event__button">
+            Criar Evento
+          </button>
+        </a>
+      }
+    </div>
+  </div>
+
+  @for (event of events; track event) {
+    <app-event-accordeon [event]="event"></app-event-accordeon>
+  }
+</div>

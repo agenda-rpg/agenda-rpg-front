@@ -1,0 +1,43 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{event.name}}</mat-card-title>
+    <mat-card-subtitle>
+      <div class="ea-subtitle">
+        <p>Data: {{event.date}}</p>
+        <p>Local: {{event.local.street}} - {{event.local.number}}, {{event.local.neighborhood}}, {{event.local.city}}, {{event.local.state}} - {{event.local.cep}}</p>
+      </div>
+    </mat-card-subtitle>
+  </mat-card-header>
+</mat-card>
+
+@if (activities.length > 0) {
+  @for (activity of activities; track activity) {
+    <div class="ea-activities-container">
+      <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{activity.title}}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="ea-activities-container__act-info">
+            <p><b>Narrador</b>: {{activity.narrator}}</p>
+            <p><b>Sistema</b>: {{activity.system}}</p>
+            <p><b>Horário</b>: {{activity.hour}}</p>
+            <p><b>Vagas Totais</b>: {{activity.vacancies}}</p>
+            <p><b>Vagas Disponíveis</b>: {{activity.vacancies - activity.players.length}}</p>
+          </div>
+          <div class="ea-activities-container__act-desc">
+            <p><b>Description</b></p>
+            <p>{{activity.description}}</p>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  }
+} @else {
+  <div class="ea-no-activity">
+    <h3>Nenhuma Atividade Encontrada</h3>
+  </div>
+}

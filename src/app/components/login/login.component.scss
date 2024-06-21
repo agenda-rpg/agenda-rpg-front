@@ -1,0 +1,66 @@
+.l-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5em 2em 2em;
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__img {
+      width: 10em;
+    }
+
+    &__text {
+      width: 10em;
+    }
+  }
+
+  &__login {
+    margin-top: 2em;
+
+    &__form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &__email-input {
+        width: 18em;
+      }
+
+      &__password-input {
+        width: 18em;
+
+        & button {
+          border: none;
+        }
+      }
+    }
+
+    &__login-button {
+      width: 20.575em;
+      height: 3.5em;
+    }
+
+    &__register-forgot-buttons {
+      display: flex;
+      justify-content: space-between;
+
+      margin-top: 1em;
+      width: 18em;
+
+      &__register {
+        width: 9.7em;
+      }
+
+      &__forgot {
+        width: 9.7em;
+      }
+    }
+  }
+}

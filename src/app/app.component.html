@@ -1,0 +1,34 @@
+
+<mat-drawer-container class="sidenav-container">
+  <mat-drawer #drawer class="sidenav-container__sidenav" mode="over" position="end">
+
+    <div class="sidenav-container__sidenav__close">
+      <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+    <div class="sidenav-container__sidenav__login-container">
+      <a routerLink="/login" routerLinkActive="router-link-active">
+        <button mat-stroked-button class="button-primary" (click)="teste();drawer.toggle()">Entrar</button>
+      </a>
+      <a routerLink="/register" routerLinkActive="router-link-active">
+        <button mat-stroked-button class="button-primary" (click)="teste();drawer.toggle()">Registrar</button>
+      </a>
+      <a routerLink="" routerLinkActive="router-link-active">
+        <button mat-stroked-button class="button-primary" (click)="teste();drawer.toggle()">Eventos</button>
+      </a>
+    </div>
+
+  </mat-drawer>
+
+  <app-navbar (openSideMenu)="drawer.toggle()" id="navbar"></app-navbar>
+  <div class="body">
+    <router-outlet></router-outlet>
+    <!-- <div class="top" style="height: 10px; background-color: blue;"></div> -->
+    <!-- <div style="height: 600px; background-color: green;"></div>
+    <div style="height: 600px; background-color: yellow;"></div>
+    <div style="height: 600px; background-color: green;"></div> -->
+    <!-- <div class="footer" style="height: 10px; background-color: red;"></div> -->
+  </div>
+</mat-drawer-container>

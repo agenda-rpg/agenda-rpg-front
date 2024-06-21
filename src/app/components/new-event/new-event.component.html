@@ -1,0 +1,55 @@
+<div class="ne-container">
+  <h2 class="ne-container__title">Novo Evento</h2>
+
+    <form class="ne-container__form" [formGroup]="newEventForm">
+
+      <mat-form-field class="ne-container__form__input">
+        <mat-label>Nome do Evento</mat-label>
+        <input matInput formControlName="eventName">
+      </mat-form-field>
+
+      <mat-form-field class="ne-container__form__input">
+        <mat-label>Data do Evento</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="eventDay">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <h3 class="ne-container__form__local-title">Local do Evento</h3>
+
+      <mat-form-field class="ne-container__form__input">
+        <mat-label>Rua</mat-label>
+        <input matInput formControlName="street">
+      </mat-form-field>
+
+      <mat-form-field class="ne-container__form__input">
+        <mat-label>Número</mat-label>
+        <input matInput formControlName="number">
+      </mat-form-field>
+
+      <mat-form-field class="ne-container__form__input">
+        <mat-label>Bairro</mat-label>
+        <input matInput formControlName="neighborhood">
+      </mat-form-field>
+
+      <mat-form-field class="ne-container__form__input">
+        <mat-label>Cidade</mat-label>
+        <input matInput formControlName="city">
+      </mat-form-field>
+
+      <mat-form-field class="ne-container__form__input">
+        <mat-label>Estado</mat-label>
+        <input matInput formControlName="state">
+      </mat-form-field>
+
+      <mat-form-field class="ne-container__form__input">
+        <mat-label>CEP</mat-label>
+        <input matInput formControlName="cep">
+      </mat-form-field>
+
+    </form>
+
+    <button mat-flat-button color="primary" class="ne-container__btn" (click)="createNewEvent()">
+      Criar evento
+    </button>
+</div>

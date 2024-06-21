@@ -1,0 +1,46 @@
+.sidenav-container {
+  height: 100%;
+
+  &__sidenav {
+    padding: 2em 1em;
+    background-color: #B39DDB;
+    width: 60%;
+
+    &__close {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+
+    &__login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      width: 100%;
+      margin-top: 3em;
+
+      & button {
+        width: 80%;
+        margin: 1em 0;
+      }
+    }
+  }
+}
+
+#navbar {
+  position:fixed;
+  width:100%;
+  z-index: 9999;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+
+  padding-top: 8vh;
+  background-color: #180E3A;
+  min-height: 92vh;
+}
